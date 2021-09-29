@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+    <style>
+        @media screen and (min-width:160px) and (max-width:499px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                margin: none;
+                background-color: rgba(212, 209, 209, 0.199);  
+            }
+            .name-control1 , .name-control2 , .name-control , .address-pincode-control , .phonenumber-email-control , .college-course-control {
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+            }
+            .address-pincode-control {
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+            }  
+            .form-control >* {
+                display: block;
+                width: 100%;
+                margin: 5px;
+            }
+            input {
+                box-sizing: border-box;
+                border-width: 1.5px;
+            }
+            .radio {
+                display: flex;
+                margin: 10px;
+                margin-top: 20px;
+                margin-left: 14px;
+            }
+            .radio-label {
+                margin-left: 10px;
+            }
+            input#male , #female {
+                margin-left: 20px;
+            }
+            .pincode-control {
+                margin: 5px;
+                margin-left: 10px;
+            }
+            .pincode {
+            margin-left: 14px;
+            margin-top: 10px;
+            width: 50%;
+            }
+            .button-control {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .button-properties {
+                border-radius: 5px;
+                font-size: 15px;
+                width: 35%; 
+                background-color: rgba(104, 22, 236, 0.938);
+                color: aliceblue;            
+            }
+            .button-properties:hover {
+                background-color: rgba(82, 216, 5, 0.719);
+            }
+            input::placeholder {
+                font-style: italic;
+                font-size: 1.2em;
+                padding: 5px;
+                padding-left: 7px;
+            }
+            input {
+                height: 30px;
+                border-radius: 5px;
+            }
+            input#male , #female {
+                height: 10px;
+            }
+        }
+        @media screen and (min-width: 500px) and (max-width: 1023px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+                background-color: rgba(212, 209, 209, 0.199);   
+            }  
+            .name-control , .phonenumber-email-control ,  .address-pincode-control , .college-course-control {
+                display: flex;
+                margin: 5px;
+                border-radius: 3px;
+                font-size: 1.4em;
+            }
+            .radio {
+                display: flex;
+                margin-top: 60px;
+                margin-left: 45px;
+                font-size: 1.4em;
+            }
+            .radio-control {
+                display: flex;
+                margin-left: 40px;
+            }
+            .radio-label {
+                margin-left: 35px;
+                margin-right: 20px;
+            }
+            input#male , #female {
+                margin-right: 20px;
+                margin-left: 20px;
+                height: 10px;
+            }
+            .pincode-control , .name-control1 , .name-control2  {
+                display: grid;
+                gap: 15px;
+                margin: 40px;
+                height: 40px;
+                width: 90%;
+            }
+            .pincode {
+                width: 70%;
+            }
+            input {
+                height: 40px;
+                border-radius: 5px;
+            }
+            input::placeholder {
+                font-style: italic;
+                font-size: 1.5em;
+                padding: 5px;
+                padding-left: 16px;
+            }
+            .button-control {
+                text-align: center;
+                margin-top: 40px;
+            }
+            .button-properties {
+                border-radius: 5px;
+                font-size: 15px;
+                width: 35%; 
+                height: 40px; 
+                margin-top: 30px;
+                background-color: rgba(104, 22, 236, 0.938);
+                color: aliceblue;         
+            }
+            .button-properties:hover {
+                background-color: rgba(82, 216, 5, 0.719);
+                color: black;
+            }
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1280px) {        
+            .container {
+                display: grid;
+                margin: 10px;
+                background-color: rgba(212, 209, 209, 0.199);   
+            }  
+            .name-control , .phonenumber-email-control ,  .address-pincode-control , .college-course-control {
+                display: flex;
+                margin: 5px;
+                border-radius: 3px;
+                font-size: 1.6em;
+            }
+            .pincode-control , .name-control1 , .name-control2  {
+                display: grid;
+                grid-template-columns: 130px 280px;
+                gap: 15px;
+                margin: 40px;
+                height: 50px;
+                width: 99%;
+            }
+            .pincode {
+                width: 70%;
+            }
+            .radio {
+                display: flex;
+                margin-top: 40px;
+                margin-left: 45px;
+                font-size: 1.7em;
+                margin-bottom: 40px;
+            }
+            input {
+                height: 40px;
+                border-radius: 5px;
+            } 
+            .radio-control {
+                display: flex;
+                margin-left: 2em;
+            }
+            .radio-label {
+                margin-left: 2em;
+                margin-right: 3em;
+            }
+            .button-control {
+                text-align: center;
+                margin-top: 40px;
+            }
+            input::placeholder {
+                font-style: italic;
+                font-size: 1.5em;
+                padding: 5px;
+                padding-left: 30px;
+            }
+            .button-properties {
+                border-radius: 5px;
+                font-size: 15px;
+                width: 25%; 
+                height: 60px; 
+                margin-top: 30px;
+                background-color: rgba(104, 22, 236, 0.938);
+                color: aliceblue;  
+                font-size: 2em;       
+            }
+            .button-properties:hover {
+                background-color: rgba(82, 216, 5, 0.719);
+                color: black;
+            }
+        }
+        @media screen and  (min-width: 1281px)  and (max-width: 1536px) {
+                .container {
+                display: grid;
+                margin: 10px;
+                background-color: rgba(212, 209, 209, 0.199);   
+            }  
+            .name-control , .phonenumber-email-control ,  .address-pincode-control , .college-course-control {
+                display: flex;
+                margin: 5px;
+                border-radius: 3px;
+                font-size: 2em;
+            }
+            .pincode-control , .name-control1 , .name-control2  {
+                display: grid;
+                grid-template-columns: 180px 350px;
+                gap: 15px;
+                margin: 40px;
+                height: 50px;
+                width: 99%;
+            }
+            .pincode {
+                width: 70%;
+            }
+            .radio {
+                display: flex;
+                margin-top: 40px;
+                margin-left: 45px;
+                font-size: 2em;
+                margin-bottom: 40px;
+            }
+            input {
+                height: 50px;
+                border-radius: 5px;
+            } 
+            .radio-control {
+                display: flex;
+                margin-left: 3em;
+            }
+            .radio-label {
+                margin-left: 3em;
+                margin-right: 4em;
+            }
+            .button-control {
+                text-align: center;
+                margin-top: 40px;
+            }
+            input::placeholder {
+                font-style: italic;
+                font-size: 1.9em;
+                padding: 5px;
+                padding-left: 30px;
+            }
+            .button-properties {
+                border-radius: 5px;
+                font-size: 15px;
+                width: 25%; 
+                height: 60px; 
+                margin-top: 30px;
+                background-color: rgba(104, 22, 236, 0.938);
+                color: aliceblue;  
+                font-size: 2em;       
+            }
+            .button-properties:hover {
+                background-color: rgba(82, 216, 5, 0.719);
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form class="container">
+        <div class="name-control , middle">    
+            <div class="form-control name-control1">
+                <label for="first-name" class="lable-control">First Name</label>
+                <input type="text" placeholder="First-Name" class="input-name-control" name="first-name" id="first-name"/>
+            </div>
+            <div class="form-control , name-control2">
+                <label for="last-name" class="label-control">Last Name</label>
+                <input type="text" placeholder="Last-Name" class="input-name-control" name="last-name" id="last-name"/>
+            </div>
+        </div>
+        <div class="radio">
+            <div>Gender</div>
+            <div class="radio-control">
+                <input type="radio" name="gender" id="male"/>
+                <label for="male" class="radio-label">Male</label>
+                <input type="radio" name="gender" id="female"/>
+                <label for="female" class="radio-label">Female</label>
+            </div>
+        </div>
+        <div class="address-pincode-control">
+            <div class="form-control name-control1">
+                <label for="address">Address</label>
+                <input type="text" placeholder="Door-No,Street/Village" class="input-address-pincode-control , width-control" name="address" id="address"/>
+            </div>
+            <div class="pincode-control">
+                <label for="pincode">Pincode</label>
+                <input type="number" class="pincode , input-address-pincode-control"/>
+            </div>
+        </div>
+        <div class="phonenumber-email-control">
+            <div class="form-control , name-control1">
+                <label for="phonenumber">Phonenumber</label>
+                <input type="number" class="phonenumber"/>
+            </div>
+            <div class="form-control , name-control2">
+                <label for="email">Email Id</label>
+                <input type="email" class="email" placeholder="example@gmail.com"/>
+            </div>
+        </div>
+        <div class="college-course-control">
+            <div class="form-control , name-control1">
+                <label for="college">College</label>
+                <input type="text" name="college" id="college"/>
+            </div>
+            <div class="form-control , name-control2">
+                <label for="course">Course</label>
+                <input type="text" name="course" id="course"/>
+            </div>
+        </div>
+        <div class="button-control">
+            <button class="button-properties">SAVE</button>
+        </div>
+    </form>
+</body>
+</html>

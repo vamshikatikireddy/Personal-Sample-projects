@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application- Form</title>
+    <style>
+        .container {
+            border: 1px solid rgb(90, 86, 86);
+            width: 100%;
+            background-color: hsla(0, 7%, 58%, 0.096);
+        }
+        .content , .qualification , .op-button {
+            display: grid;
+            grid-template-columns: 200px;
+            gap: 20px;
+            margin: 20px;
+            justify-content: center;
+        }
+        .radio-button {
+            display: grid;
+            grid-template-columns: 20px 40px;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+        .cancel-button , .submit-button{
+            width: 120px;
+            height: 30px;
+            margin: 20px;
+            background-color: rgb(27, 63, 247);
+            color: white;
+            font-family: sans-serif;
+            box-shadow: 3px 2px rgb(27, 27, 68);
+        }
+        input.inp {
+            height: 30px;
+        }
+        .submit-button {
+            float: right;
+        }
+        input::placeholder {
+            padding-left: 10px;
+            }
+        input:hover , select:hover {
+            border-color:  rgb(0, 0, 255);
+        }
+        .cancel-button:hover{
+            background-color: rgb(255, 43, 43);
+        }
+        .submit-button:hover {
+            background-color: rgba(13, 255, 13, 0.76);
+            color: black;
+        }
+        @media screen and (min-width:361px) {
+            .content , .op-button , .qualification{
+                display: grid;
+                grid-template-columns: 150px 150px;
+            }
+            .radio-button {
+                display: grid;
+                grid-template-columns: 20px 40px 25px 50px 25px 30px;
+            }            
+        }
+    </style>
+</head>
+<body>
+    <form class="container">
+        <div class="content">
+            <input type="text" placeholder="First Name" class="inp" id="name"/>
+            <input type="text" placeholder="Last Name" id="name" class="inp"/>
+            <input type="text" placeholder="Address1" name="address" class="inp" id="address"/>
+            <input type="text" placeholder="Village" name="village" class="inp"/>
+            <input type="number" placeholder="Pin Code" name="pincode" class="inp"/>
+            <input type="number" placeholder="Phonenumber" id="phonenumber" class="inp"/>
+            <input type="number" placeholder="Parent-phonenumber" id="phonenumber" class="inp"/>
+            <input type="email" placeholder="User@example.com" name="emailid" id="email" class="inp"/> 
+            <div class="gender">
+                <strong>
+                    Gender
+                </strong>
+                <div class="radio-button">
+                    <input type="radio" id="male" name="gender" value="male"/>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female"/>
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other"/>
+                    <label for="other">Other</label>
+                </div>
+            </div>
+        </div> 
+        <div class="qualification">
+            <input type="text" placeholder="COLLAGE" name="collage" class="inp" id="">
+            <input type="text" placeholder="COURSE" name="course" class="inp" id="">
+        </div>
+        <div class="op-button">
+            <button class="cancel-button">CANCEL</button>
+            <button class="submit-button">SUBMIT</button>
+        </div>
+    </form>
+</body>
+</html>

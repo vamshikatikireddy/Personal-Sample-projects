@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat form task</title>
+    <style>
+        .row {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+    
+        }
+        .inp {
+            float: right;
+            width:90%;
+        }
+        .rad {
+            border-radius: 3px;
+        }
+        .lab {
+            display: inline-block;
+            height: 30px;
+            width: 10%;
+        }
+        #sub {
+            background-color: green;
+            color: honeydew;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="lab">
+                    <label for="id">
+                        Id
+                    </label>
+                </div>
+                <div class="inp">
+                    <input type="number" class="rad" id="id" name="id"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lab">
+                    <label for="tit">
+                        Title
+                    </label>
+                </div>
+                <div class="inp">
+                    <input type="text" class="rad" id="tit" name="title"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lab">
+                    <label for="cred">
+                        Credits
+                    </label>
+                </div>
+                <div class="inp">
+                    <input type="number" class="rad" id="cred" name="credits"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lab">
+                    <label for="status">Status</label>
+                </div>
+                <div class="inp">
+                    <select name="status" class="rad" id="status">
+                        <option value="">Select a Status</option>
+                        <option value="open">Open</option>
+                        <option value="in-progress">In-progress</option>
+                        <option value="complete">Complete</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="lab">
+                    <label for="assignedTo">Assigned To</label>
+                </div>
+                <div class="inp">
+                    <select name="assignedTo" class="rad" id="assignedTo">
+                        <option value="">Select a Name</option>
+                        <option value="vamshi">vamshi Katikireddy</option>
+                        <option value="sandeep">Sandeep Vasarla</option>
+                        <option value="rajesh">Rajesh Ravula</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <button id="sub">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

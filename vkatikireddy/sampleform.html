@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application form</title>
+</head>
+<style>
+  .container {
+    border: 1px solid rgb(90, 86, 86);
+    width: 660px;
+    background:linear-gradient(45deg,#fead06,#c00def)
+  }
+  .full-name , .second-row{
+    display: grid;
+    grid-template-columns: 200px 200px;
+    gap: 10px;
+    margin: 20px;
+    height: 40px;
+  }
+  strong {
+    margin-left: 10px;
+  }
+  .checkbox {
+    margin: 10px;
+    margin-left: 20px;
+    font-weight: 600;
+  }
+  .radio-button {
+    display: grid;
+    grid-template-columns: 25px 40px 25px 55px 25px 40px;
+    margin: 20px;
+    font-weight: 600;
+  }
+  .address-row {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 10px;
+    margin: 20px;
+    height: 100px;
+  }
+  .phone-number {
+    display: grid;
+    grid-template-columns: 30px 200px;
+    gap: 10px;
+    margin: 20px;
+    height: 30px;
+  }
+  .cancel-button , .submit-button{
+    width: 120px;
+    height: 30px;
+    margin: 20px;
+    background-color: rgb(27, 63, 247);
+    color: white;
+    font-family: sans-serif;
+    box-shadow: 3px 2px rgb(27, 27, 68);
+    border-radius: 4px;
+  }
+  .submit-button {
+    float: right;
+  }
+  input::placeholder{
+    padding-left: 10px;
+      }
+  input:hover , select:hover {
+    border-color:  rgb(0, 0, 255);
+  }
+  .cancel-button:hover{
+    background-color: rgb(255, 43, 43);
+  }
+  .submit-button:hover {
+    background-color: rgba(13, 255, 13, 0.76);
+    color: black;
+  }
+</style>
+<body> 
+  <form class="container">
+    <div class="full-name">
+      <input type="text" placeholder="first Name" id="name"/>
+      <input type="text" placeholder="last Name" id="name"/>
+    </div>
+    <div class="second-row">
+      <input type="email" placeholder="user@example.com" name="emailid" id="email"/>   
+      <select name="education" id="education">
+        <option value="">Qualification</option>
+        <option value="pg">PG</option>
+        <option value="be">BE</option>
+        <option value="btech">B.TECH</option>
+        <option value="degree">DEGREE</option>
+        <option value="inter">INTER</option>
+      </select>
+    </div>
+    <strong>
+      SKILLS
+    </strong>
+    <div class="checkbox">
+      <input type="checkbox" name="html" id="html">
+      <label for="html">HTML</label>
+      <input type="checkbox" name="css" id="css">
+      <label for="css">CSS</label>
+      <input type="checkbox" name="javascript" id="javascript">
+      <label for="html">JAVASCRIPT</label>
+      <input type="checkbox" name="mongo-db" id="mongo-db">
+      <label for="html">MONGO-DB</label>
+    </div>
+    <strong>
+      Please Choose Your Gender
+    </strong>
+    <div class="radio-button">
+      <input type="radio" id="male" name="gender" value="male"/>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female"/>
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other"/>
+      <label for="other">Other</label>
+    </div>
+    <div class="address-row">
+      <input type="text" placeholder="Address1" name="address" id="address"/>
+      <input type="text" placeholder="Address2" name="address" id="address"/>
+      <select name="country" id="country">
+        <option value="">Select a Country</option>
+        <option value="afghanistan">Afghanistan</option>
+        <option value="albania">Albania</option>
+        <option value="algeria">Algeria</option>
+        <option value="cambodia"> Cambodia</option>
+        <option value="canada">Canada</option>
+        <option value="denmark">Denmark</option>
+        <option value="england">England</option>
+        <option value="france">France</option>
+        <option value="india">India</option>
+        <option value="japan">Japan</option>
+        <option value="uk">UK</option>
+      </select>
+      <input type="text" placeholder="City"/>
+      <input type="text" placeholder="State"/>
+      <input type="number" placeholder="Pin Code"/>
+    </div>
+    <div class="phone-number"> 
+      <select name="code" id="phonenumber">
+        <option value=""></option>
+        <option value="+1">+1</option>
+        <option value="+91">+91</option>
+      </select>
+      <input type="number" placeholder="phonenumber" id="phonenumber"/>
+    </div>
+    <div class="op-button">
+      <button class="cancel-button">CANCEL</button>
+      <button class="submit-button">SUBMIT</button>
+    </div>
+  </form>  
+</body>
+</html>
